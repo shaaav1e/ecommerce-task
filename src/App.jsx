@@ -6,6 +6,7 @@ import BottomNavbar from "./components/BottomNavbar";
 import Hero from "./components/Hero";
 import Deals from "./components/Deals";
 import Footer from "./components/Footer";
+import Outdoor from "./components/Outdoor";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Hero />
         <Deals />
+        <Outdoor />
       </main>
       <Footer />
     </>
