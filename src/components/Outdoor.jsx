@@ -24,9 +24,10 @@ const Outdoor = () => {
   return (
     <div className="mt-4">
       <div className="bg-white container rounded-md border border-gray-200">
-        <div className="grid grid-cols-5">
-          {/* Left Column: Home and Outdoor */}
-          <div className="relative h-full">
+        {/* Changed grid-cols-5 to custom grid with fr units */}
+        <div className="grid grid-cols-[350px_1fr]">
+          {/* Left Column: Home and Outdoor - now with fixed width */}
+          <div className="relative h-full bg-box-1">
             <img
               src={plant}
               alt="Plant"
@@ -43,7 +44,7 @@ const Outdoor = () => {
           </div>
 
           {/* Right Columns: Product Grid */}
-          <div className="col-span-4 grid grid-cols-4">
+          <div className="grid grid-cols-4">
             {items.map((item, index) => {
               // Calculate row and column position
               const row = Math.floor(index / 4);
@@ -58,7 +59,7 @@ const Outdoor = () => {
                 >
                   <div>
                     <p className="font-medium text-base">{item.name}</p>
-                    <p className="text-sm text-gray-500">{item.text}</p>
+                    <p className="text-sm text-icons">{item.text}</p>
                   </div>
 
                   <div className="flex justify-end mt-2">
