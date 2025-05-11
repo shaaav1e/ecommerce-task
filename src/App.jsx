@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import Deals from "./components/Deals";
 import Footer from "./components/Footer";
 import Outdoor from "./components/Outdoor";
+import Consumer from "./components/Consumer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <Deals />
         <Outdoor />
+        <Consumer />
       </main>
       <Footer />
     </>

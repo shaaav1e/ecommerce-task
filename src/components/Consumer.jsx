@@ -1,24 +1,24 @@
 import React from "react";
-import plant from "/image92.png";
-import softchair from "/interior/1.jpg";
-import lamp from "/interior/6.jpg";
-import mattress from "/interior/5.jpg";
-import wood from "/interior/3.jpg";
-import mixer from "/interior/9.jpg";
+import ipad from "/tech/2.jpg";
+import electronics from "/electronics.jpg";
 import blender from "/interior/8.jpg";
-import appliance from "/interior/7.jpg";
-import decoration from "/interior/4.jpg";
-
-const Outdoor = () => {
+import securitycamera from "/security-camera.png";
+import graphiccard from "/graphic-cards.avif";
+import watch from "/8.jpg";
+import laptop from "/7.jpg";
+import camera from "/6.jpg";
+import jug from "/10.jpg";
+import mobile from "/3.jpg";
+const Consumer = () => {
   const items = [
-    { image: softchair, name: "Soft chairs", text: "From USD 19" },
-    { image: lamp, name: "Lamps", text: "From USD 19" },
-    { image: mattress, name: "Mattresses", text: "From USD 19" },
-    { image: wood, name: "Wooden Jugs", text: "From USD 19" },
-    { image: mixer, name: "Kitchen mixers", text: "From USD 100" },
-    { image: blender, name: "Blenders", text: "From USD 39" },
-    { image: appliance, name: "Home appliances", text: "From USD 19" },
-    { image: decoration, name: "Decoration Pieces", text: "From USD 10" },
+    { image: watch, name: "Smart Watches", text: "From USD 250" },
+    { image: camera, name: "Cameras", text: "From USD 380" },
+    { image: jug, name: "Electric Kettle", text: "From USD 38" },
+    { image: laptop, name: "Laptops", text: "From USD 340" },
+    { image: mobile, name: "SmartPhones", text: "From USD 310" },
+    { image: securitycamera, name: "Security Camera", text: "From USD 390" },
+    { image: graphiccard, name: "Graphic Cards", text: "From USD 1900" },
+    { image: ipad, name: "Ipads", text: "From USD 850" },
   ];
 
   return (
@@ -26,16 +26,16 @@ const Outdoor = () => {
       <div className="bg-white container rounded-md border border-gray-200">
         {/* Changed grid-cols-5 to custom grid with fr units */}
         <div className="grid grid-cols-[350px_1fr]">
-          {/* Left Column: Home and Outdoor - now with fixed width */}
+          {/* Left Column: Consumer - now with fixed width */}
           <div className="relative h-full bg-box-1">
             <img
-              src={plant}
-              alt="Plant"
-              className="w-full h-full object-cover"
+              src={electronics}
+              alt="Mobile"
+              className="w-full h-full object-cover opacity-50"
             />
             <div className="absolute top-6 left-6 z-10">
               <h2 className="text-black text-xl font-semibold">
-                Home and <br /> outdoor
+                Consumer <br /> electronics and <br /> gadgets
               </h2>
               <button className="bg-white mt-4 px-4 py-2 rounded-md">
                 Source now
@@ -79,4 +79,4 @@ const Outdoor = () => {
   );
 };
 
-export default Outdoor;
+export default Consumer;

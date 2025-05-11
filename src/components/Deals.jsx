@@ -17,7 +17,7 @@ const Deals = () => {
     { image: watch, name: "Smart watches", discount: "-25%" },
     { image: laptop, name: "Laptops", discount: "-15%" },
     { image: camera, name: "GoPro cameras", discount: "-10%" },
-    { image: jug, name: "Water jug", discount: "-5%" },
+    { image: jug, name: "Kettle", discount: "-5%" },
     { image: mobile, name: "Mobile phones", discount: "-20%" },
   ];
 
