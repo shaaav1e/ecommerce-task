@@ -35,7 +35,7 @@ const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="mt-2">
-      <div className="container bg-white rounded-md border-1 border-icons px-6 py-4 ">
+      <div className="container bg-white rounded-md border-1 border-border px-6 py-4 ">
         <div className="grid grid-cols-5 grid-rows-1 gap-4 h-[450px]">
           {/* Left Side - Col 1 */}
           <div className="flex flex-col gap-1.5">

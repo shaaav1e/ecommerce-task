@@ -25,7 +25,7 @@ const BottomNavbar = () => {
     },
   ];
   return (
-    <div className="bg-white border-icons py-2 border-t-1 border-b-1 mt-2">
+    <div className="bg-white border-border py-2 border-t-1 border-b-1 mt-2">
       <div className="container text-black flex items-center justify-center">
         {/* Left side with flex-1 - taking more space */}
         <div className="flex flex-1 items-center gap-8">

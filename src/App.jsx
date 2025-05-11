@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import BottomNavbar from "./components/BottomNavbar";
 import Hero from "./components/Hero";
+import Deals from "./components/Deals";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
       <main>
         <Hero />
+        <Deals />
       </main>
     </>
   );
