@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme
+{
+    --color-white:#ffffff;
+    --color-gray:#777777;
+    --color-blue:#0D6EFD;
+    /* Discount Prices */
+    --color-red-border:#FFE3E3;
+    --color-red:#EB001B;
+    /* Text color */
+    --color-text-black:#1C1C1C;
+    --color-icons:#8B96A5;
+    /* Hero */
+    --color-hover:#E5F1FF;
+    --color-hero-text:#505050;
+    --color-hero-2:#F38332;
+    --color-hero-3:#55BDC3;
+}
+.container
+{
+    width:80%;
+    margin:0 auto;
+}
+
+.inter {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0;
+}
+.line-height-1
+{
+     line-height: 1.375; 
+}
