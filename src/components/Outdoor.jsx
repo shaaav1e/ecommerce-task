@@ -12,55 +12,65 @@ import decoration from "/interior/4.jpg";
 const Outdoor = () => {
   const items = [
     { image: softchair, name: "Soft chairs", text: "From USD 19" },
-    { image: lamp, name: "Lamps", text: "From USD 22" },
-    { image: mattress, name: "Mattress", text: "From USD 25" },
-    { image: wood, name: "Wooden Jug", text: "From USD 28" },
-    { image: mixer, name: "Kitchen Mixer", text: "From USD 100" },
+    { image: lamp, name: "Sofa & chair", text: "From USD 19" },
+    { image: mattress, name: "Kitchen dishes", text: "From USD 19" },
+    { image: wood, name: "Smart watches", text: "From USD 19" },
+    { image: mixer, name: "Kitchen mixer", text: "From USD 100" },
     { image: blender, name: "Blenders", text: "From USD 39" },
-    { image: appliance, name: "Home appliance", text: "From USD 18" },
-    { image: decoration, name: "Decoration", text: "From USD 10" },
+    { image: appliance, name: "Home appliance", text: "From USD 19" },
+    { image: decoration, name: "Coffee maker", text: "From USD 10" },
   ];
 
   return (
     <div className="mt-4">
-      <div className="bg-white container rounded-md border border-gray-200 ">
-        <div className="grid grid-cols-5 gap-4">
+      <div className="bg-white container rounded-md border border-gray-200">
+        <div className="grid grid-cols-5">
           {/* Left Column: Home and Outdoor */}
-          <div className="relative col-span-1 rounded-md overflow-hidden">
+          <div className="relative h-full">
             <img
               src={plant}
               alt="Plant"
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-5 left-6 z-10">
+            <div className="absolute top-6 left-6 z-10">
               <h2 className="text-black text-xl font-semibold">
                 Home and <br /> outdoor
               </h2>
-              <button className="bg-white mt-4 px-4 py-3 rounded-md text-lg ">
+              <button className="bg-white mt-4 px-4 py-2 rounded-md">
                 Source now
               </button>
             </div>
           </div>
 
           {/* Right Columns: Product Grid */}
-          <div className="col-span-4 ml-10 grid grid-cols-4 gap-4">
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className="h-full border-l border-b border-gray-200 flex flex-col  gap-2 px-2 py-4"
-              >
-                <p>{item.name}</p>
-                <p>{item.text}</p>
+          <div className="col-span-4 grid grid-cols-4">
+            {items.map((item, index) => {
+              // Calculate row and column position
+              const row = Math.floor(index / 4);
+              const col = index % 4;
 
-                <div className="flex flex-end">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-24 h-24 object-contain "
-                  />
+              return (
+                <div
+                  key={index}
+                  className={`h-full flex flex-col justify-between px-4 py-4
+                    ${col > 0 ? "border-l border-gray-200" : ""}
+                    ${row > 0 ? "border-t border-gray-200" : ""}`}
+                >
+                  <div>
+                    <p className="font-medium text-base">{item.name}</p>
+                    <p className="text-sm text-gray-500">{item.text}</p>
+                  </div>
+
+                  <div className="flex justify-end mt-2">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-20 h-20 object-contain"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
