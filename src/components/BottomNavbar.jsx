@@ -41,13 +41,18 @@ const BottomNavbar = () => {
         </div>
         {/* 1st right side - taking less space */}
         <div className="flex items-center mr-6">
-          <p className="line-height-1">English,USD</p>
+          <p className="line-height-1">English, USD</p>
           <RiArrowDropDownLine size={32} className="text-icons" />
         </div>
         {/* 2nd right side */}
         <div className="flex items-center">
           <p className="line-height-1">Ship to </p>
-          <FaHome className="ml-1" />
+          <img
+            src="/public/pak-flag.png"
+            alt="Pakistan Flag"
+            className="h-8 ml-2"
+          />
+          {/* <FaHome className="ml-1" /> */}
           <RiArrowDropDownLine size={32} className="text-icons" />
         </div>
       </div>

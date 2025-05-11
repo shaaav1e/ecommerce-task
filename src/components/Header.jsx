@@ -25,7 +25,7 @@ const Header = () => {
       {/* Flex - Logo*/}
       <div className="container flex justify-between items-center">
         <div className="logo flex items-center">
-          <img src="/logo-colored.svg" alt="Logo" className="h-8" />
+          <img src="/logo-colored.svg" alt="Logo" className="h-12" />
         </div>
         {/* Input - Mid Section*/}{" "}
         <div className="Search flex items-stretch border-2 border-blue rounded-md">

@@ -14,8 +14,11 @@
     /* Hero */
     --color-hover:#E5F1FF;
     --color-hero-text:#505050;
-    --color-hero-2:#F38332;
-    --color-hero-3:#55BDC3;
+    --color-button:#127FFF;
+    --color-button-2:#0067FF;
+    --color-box-1:#E3F0FF;
+    --color-box-2:#F38332;
+    --color-box-3:#55BDC3;
 }
 .container
 {
