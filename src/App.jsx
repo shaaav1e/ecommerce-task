@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Outdoor from "./components/Outdoor";
 import Consumer from "./components/Consumer";
 import Quote from "./components/Quote";
+import Recommended from "./components/Recommended";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Outdoor />
         <Consumer />
         <Quote />
+        <Recommended />
       </main>
       <Footer />
     </>

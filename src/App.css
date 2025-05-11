@@ -21,7 +21,8 @@
     --color-box-1:#E3F0FF;
     --color-box-2:#F38332;
     --color-box-3:#55BDC3;
-    --color-placehold:8B96A5;
+    /* Recommended items - Description color */
+    --color-desc:#8B96A5;
 }
 .container
 {
