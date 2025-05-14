@@ -10,6 +10,8 @@ import Outdoor from "./components/Outdoor";
 import Consumer from "./components/Consumer";
 import Quote from "./components/Quote";
 import Recommended from "./components/Recommended";
+import ExtraServices from "./components/ExtraServices";
+import Suppliers from "./components/Suppliers";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Consumer />
         <Quote />
         <Recommended />
+        <ExtraServices />
+        <Suppliers />
       </main>
       <Footer />
     </>
