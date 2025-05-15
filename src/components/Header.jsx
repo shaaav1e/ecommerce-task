@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
@@ -23,6 +23,22 @@ import logo from "/logo-colored.svg";
 import MobileBottomNav from "./MobileBottomNav";
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+
+  // Effect to toggle body scrolling when sidebar opens/closes
+  useEffect(() => {
+    if (showSidebar) {
+      // Disable scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to re-enable scrolling when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showSidebar]);
 
   const icons = [
     {
@@ -82,8 +98,9 @@ const Header = () => {
       {/* Mobile Layout */}
       <div className="w-full px-4 py-2 flex flex-col md:hidden">
         <div className="flex justify-between items-center">
+          {" "}
           <div className="left flex items-center gap-4">
-            <button onClick={() => setShowSidebar(true)}>
+            <button onClick={() => setShowSidebar(true)} aria-label="Open menu">
               <RxHamburgerMenu
                 size={24}
                 className="text-gray-700 cursor-pointer"
@@ -104,7 +121,6 @@ const Header = () => {
             placeholder="Search"
           />
         </div>
-
         {/* Mobile Sidebar Navigation */}
         <div
           className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
@@ -120,8 +136,11 @@ const Header = () => {
               <div className="ml-3">
                 <div className="text-sm font-medium">Sign in | Register</div>
               </div>
-            </div>
-            <button onClick={() => setShowSidebar(false)}>
+            </div>{" "}
+            <button
+              onClick={() => setShowSidebar(false)}
+              aria-label="Close menu"
+            >
               <IoMdClose size={24} className="text-gray-700" />
             </button>
           </div>
@@ -209,15 +228,8 @@ const Header = () => {
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Overlay when sidebar is open */}
-        {showSidebar && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
-            onClick={() => setShowSidebar(false)}
-          ></div>
-        )}
+        </div>{" "}
+        {/* No overlay - removed to keep the rest of the screen visible */}
       </div>
       <MobileBottomNav />
     </div>

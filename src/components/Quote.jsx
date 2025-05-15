@@ -31,14 +31,14 @@ const Quote = () => {
               <textarea
                 placeholder="Type more details"
                 className="w-full border border-gray-200 rounded-md px-2 py-3 text-md h-24 text-black focus:outline-none font-light placeholder-gray-400"
-              ></textarea>
-              <div className="flex gap-2">
+              ></textarea>{" "}
+              <div className="flex gap-2 flex-wrap">
                 <input
                   type="text"
                   placeholder="Quantity"
-                  className="w-fit border border-gray-200 rounded-md px-2 py-2 text-md text-black focus:outline-none font-light placeholder-black"
+                  className="flex-grow min-w-0 border border-gray-200 rounded-md px-2 py-2 text-md text-black focus:outline-none font-light placeholder-black"
                 />
-                <select className="border border-gray-200 rounded-md px-2 py-2 text-sm bg-white">
+                <select className="border border-gray-200 rounded-md px-2 py-2 text-sm bg-white flex-shrink-0">
                   <option>Pcs</option>
                   <option>Kg</option>
                   <option>Tons</option>
