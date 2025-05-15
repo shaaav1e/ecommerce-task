@@ -26,31 +26,44 @@ const BottomNavbar = () => {
   ];
   return (
     <>
-      <div className="hidden md:block md:bg-white md:border-border md:py-2 md:border-t-1 md:border-b-1 md:mt-2">
-        <div className="container text-black flex items-center justify-center">
+      <div className="hidden md:block bg-white border-border py-2 border-t border-b mt-2">
+        <div className="w-[100%] md:container md:mx-auto px-4 md:px-0 text-black flex items-center justify-between">
+          {" "}
           {/* Left side with flex-1 - taking more space */}
-          <div className="flex flex-1 items-center gap-8">
-            <GiHamburgerMenu />
+          <div className="flex flex-1 items-center md:gap-3 lg:gap-6 xl:gap-8">
+            <GiHamburgerMenu className="flex-shrink-0" />
             {menu_names.map((menu, i) => (
-              <div key={i} className="flex items-center">
-                <p className="text-black">{menu.name}</p>
+              <div key={i} className="flex items-center whitespace-nowrap">
+                <p className="text-black text-sm md:text-base">{menu.name}</p>
                 {menu.hasDropdown && (
-                  <RiArrowDropDownLine size={32} className="text-icons" />
+                  <RiArrowDropDownLine
+                    size={24}
+                    className="text-icons flex-shrink-0"
+                  />
                 )}
               </div>
             ))}
-          </div>
+          </div>{" "}
           {/* 1st right side - taking less space */}
-          <div className="flex items-center mr-6">
-            <p className="line-height-1">English, USD</p>
-            <RiArrowDropDownLine size={32} className="text-icons" />
+          <div className="flex items-center mr-2 md:mr-4 lg:mr-6 flex-shrink-0 whitespace-nowrap">
+            <p className="line-height-1 text-sm md:text-base">English, USD</p>
+            <RiArrowDropDownLine
+              size={24}
+              className="text-icons flex-shrink-0"
+            />
           </div>
           {/* 2nd right side */}
-          <div className="flex items-center">
-            <p className="line-height-1">Ship to </p>
-            <img src="/pak-flag.png" alt="Pakistan Flag" className="h-8 ml-2" />
-            {/* <FaHome className="ml-1" /> */}
-            <RiArrowDropDownLine size={32} className="text-icons" />
+          <div className="flex items-center flex-shrink-0 whitespace-nowrap">
+            <p className="line-height-1 text-sm md:text-base">Ship to </p>
+            <img
+              src="/pak-flag.png"
+              alt="Pakistan Flag"
+              className="h-6 md:h-8 ml-2 flex-shrink-0"
+            />
+            <RiArrowDropDownLine
+              size={24}
+              className="text-icons flex-shrink-0"
+            />
           </div>
         </div>
       </div>

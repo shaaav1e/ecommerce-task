@@ -38,38 +38,34 @@ const Header = () => {
       para: "My cart",
     },
   ];
-
   return (
     <div className="bg-white py-4">
-      {" "}
       {/* Desktop/Tablet Layout */}
-      <div className="hidden container md:flex md:justify-between md:items-center md:flex-wrap lg:flex-nowrap">
+      <div className="hidden w-[100%] md:container md:mx-auto px-4 md:px-0 md:flex md:justify-between md:items-center">
         {/* Logo - Left Section */}
-        <div className="logo flex items-center md:mb-0 md:mr-4 lg:mr-0">
-          <img src={logo} alt="Logo" className="h-12" />
+        <div className="logo flex items-center flex-shrink-0 md:mr-4">
+          <img src={logo} alt="Logo" className="h-10 md:h-12" />
         </div>
-
         {/* Input - Mid Section */}
-        <div className="Search flex-grow flex items-stretch border-2 border-blue rounded-md md:order-3 md:w-full md:mt-4 lg:mt-0 lg:order-none lg:w-auto lg:max-w-xl xl:max-w-2xl">
+        <div className="Search flex-shrink flex-grow flex items-stretch border-2 border-blue rounded-md mx-4 min-w-0 max-w-3xl">
           <input
             type="text"
             placeholder="Search"
             className="pl-3 py-2 outline-none min-w-0 flex-grow"
           />
           <div className="flex items-center px-2 md:px-3 lg:px-4 border-l border-blue cursor-pointer whitespace-nowrap">
-            <p className="text-sm lg:text-base">All category</p>
+            <p className="hidden sm:block text-sm lg:text-base">All category</p>
             <RiArrowDropDownLine
               size={24}
               className="text-icons flex-shrink-0"
             />
           </div>
-          <button className="bg-blue-600 text-white px-4 lg:px-6 py-2 whitespace-nowrap">
+          <button className="bg-blue-600 text-white px-3 md:px-4 lg:px-6 py-2 whitespace-nowrap">
             Search
           </button>
-        </div>
-
+        </div>{" "}
         {/* Icons - Right Section */}
-        <div className="flex items-center gap-3 md:gap-4 lg:gap-6 h-full my-auto">
+        <div className="flex-shrink-0 flex items-center gap-2 md:gap-3 lg:gap-5 h-full my-auto ml-1">
           {icons.map((icon, i) => (
             <div
               key={i}
