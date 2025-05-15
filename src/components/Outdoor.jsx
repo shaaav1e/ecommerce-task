@@ -1,4 +1,5 @@
 import React from "react";
+// Images
 import plant from "/image92.png";
 import softchair from "/interior/1.jpg";
 import lamp from "/interior/6.jpg";
@@ -8,7 +9,8 @@ import mixer from "/interior/9.jpg";
 import blender from "/interior/8.jpg";
 import appliance from "/interior/7.jpg";
 import decoration from "/interior/4.jpg";
-
+// Icons
+import { GoArrowRight } from "react-icons/go";
 const Outdoor = () => {
   const items = [
     { image: softchair, name: "Soft chairs", text: "From USD 19" },
@@ -23,44 +25,40 @@ const Outdoor = () => {
 
   return (
     <div className="mt-4">
-      <div className="bg-white container rounded-md border border-gray-200">
+      <div className="bg-white md:container md:rounded-md md:border md:border-gray-200">
         {/* Mobile Layout */}
         <div className="lg:hidden">
-          <div className="relative bg-box-1 h-48">
-            <img
-              src={plant}
-              alt="Plant"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute top-4 left-4 z-10">
-              <h2 className="text-black text-xl font-semibold">
-                Home and <br /> outdoor
-              </h2>
-              <button className="bg-white mt-3 px-4 py-1 rounded-md text-sm">
-                Source now
-              </button>
-            </div>
-          </div>
-
+          {" "}
+          <h2 className="text-black text-lg font-semibold px-6 py-4 border-b border-gray-200/60">
+            Home and outdoor
+          </h2>{" "}
           <div className="flex overflow-x-auto pb-4 scrollbar-thin">
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 border-r border-gray-200 last:border-r-0 w-[160px] flex flex-col justify-between p-4"
-              >
-                <div>
-                  <p className="font-medium text-base">{item.name}</p>
-                  <p className="text-sm text-icons">{item.text}</p>
+            <div className="flex border-r border-l border-b border-gray-200/60">
+              {items.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 border-r border-gray-200/60 last:border-r-0 w-[160px] flex flex-col items-center p-4"
+                >
+                  <div className="flex justify-center ">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-24 h-24 object-contain"
+                    />
+                  </div>
+                  <p className="text-center font-medium text-sm">{item.name}</p>
+                  <p className="text-center text-xs text-gray-500">
+                    {item.text}
+                  </p>
                 </div>
-                <div className="flex justify-end mt-3">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-20 h-20 object-contain"
-                  />
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>{" "}
+          <div className="flex items-center p-4 gap-2 border-b border-gray-200">
+            <a href="#" className="text-blue-500 flex items-center">
+              Source now
+            </a>
+            <GoArrowRight size={24} className="font-bold text-blue" />
           </div>
         </div>
 
