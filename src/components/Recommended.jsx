@@ -62,26 +62,28 @@ const Recommended = () => {
 
   return (
     <div className="mt-6">
-      <div className="container">
+      <div className="container px-4 py-2 md:px-0 md:py-0">
         <h1 className="text-black font-semibold text-2xl">Recommended items</h1>
-        <div className="mt-4 grid grid-cols-5 gap-4">
+        <div className="mt-4 grid grid-cols-2 md:grid-cols-5 gap-4">
           {clothItems.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white rounded-md overflow-hidden"
+              className="border-1 border-gray-200 rounded-md bg-white"
             >
-              <div className="flex justify-center items-center p-4">
-                <img
-                  src={item.image}
-                  alt={`Cloth item ${index + 1}`}
-                  className="h-32 object-contain"
-                />
-              </div>
-              <div className="px-2 pb-3">
-                <p className="text-black font-semibold">{item.price}</p>
-                <p className="text-sm text-[color:var(--color-desc)]">
-                  {item.text}
-                </p>
+              <div className="flex flex-col">
+                <div className="flex justify-center items-center p-4">
+                  <img
+                    src={item.image}
+                    alt={`Cloth item ${index + 1}`}
+                    className="h-32 object-contain"
+                  />
+                </div>
+                <div className="px-3 pb-3">
+                  <p className="text-black font-semibold">{item.price}</p>
+                  <p className="text-sm text-[color:var(--color-desc)]">
+                    {item.text}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

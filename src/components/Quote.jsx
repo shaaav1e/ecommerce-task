@@ -3,13 +3,13 @@ import React from "react";
 const Quote = () => {
   return (
     <div className="mt-4">
-      <div className="bg-white md:container md:rounded-md">
+      <div className="bg-white container md:rounded-md">
         <div className="flex justify-between bg md:rounded-md overflow-hidden">
           <div className="md:w-1/2 flex flex-col gap-3 px-8 md:px-12 py-3 md:py-10 text-white">
             <h1 className="font-semibold text-xl md:text-3xl tracking-wide">
               An easy way to send <br /> requests to all suppliers
             </h1>
-            <p className="hidden md:font-light md:tracking-wider">
+            <p className="hidden md:block md:font-light md:tracking-wider">
               Easily connect with all your suppliers in just a few clicks. Save
               time <br /> by sending requests in bulk.
             </p>
@@ -18,7 +18,7 @@ const Quote = () => {
             </button>
           </div>
           {/* Form */}
-          <div className="hidden md:bg-white md:text-black md:rounded-lg md: shadow-md md:p-8 md:mx-6 md:my-6 md:w-1/3">
+          <div className="hidden md:block md:bg-white md:text-black md:rounded-lg md: shadow-md md:p-8 md:mx-6 md:my-6 md:w-1/3">
             <h3 className="text-lg font-semibold mb-4">
               Send quote to suppliers
             </h3>

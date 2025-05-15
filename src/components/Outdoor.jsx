@@ -25,7 +25,7 @@ const Outdoor = () => {
 
   return (
     <div className="mt-4">
-      <div className="bg-white md:container md:rounded-md md:border md:border-gray-200">
+      <div className="bg-white container md:rounded-md md:border md:border-gray-200">
         {/* Mobile Layout */}
         <div className="lg:hidden">
           {" "}

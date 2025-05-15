@@ -23,7 +23,7 @@ const Deals = () => {
 
   return (
     <div className="mt-8">
-      <div className="bg-white px-6 py-4 md:container md:rounded-md md:border md:border-gray-200 md:px-6 md:py-4">
+      <div className="bg-white px-6 py-4 container md:rounded-md md:border md:border-gray-200 md:px-6 md:py-4">
         {/* Mobile Layout */}
         <div className="lg:hidden">
           <div className="flex justify-between items-center">
