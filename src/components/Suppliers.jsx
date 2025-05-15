@@ -51,7 +51,7 @@ const Suppliers = () => {
     {
       image: scotland,
       name: "Scotland",
-      text: "shopname.com.scot",
+      text: "shopname.com.sc",
     },
     {
       image: usa,
