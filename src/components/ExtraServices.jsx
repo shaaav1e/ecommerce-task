@@ -34,19 +34,48 @@ const ExtraServices = () => {
   ];
   return (
     <div className="mt-6">
-      <div className="container">
-        <h1 className="text-black font-semibold text-2xl">
+      <div className="container ">
+        <h1 className="text-black font-semibold text-xl md:text-2xl">
           Our extra services
         </h1>
-        <div className="mt-4 grid grid-cols-4 gap-10 ">
+
+        {/* Mobile layout - horizontal scrolling */}
+        <div className="mt-4 flex overflow-x-auto pb-6 gap-4 md:hidden scrollbar-thin">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-md relative">
+            <div
+              key={index}
+              className="flex-shrink-0 w-[280px] border border-gray-200/60 bg-white rounded-md relative shadow-sm"
+            >
+              <div className="relative">
+                <img
+                  src={service.image}
+                  alt="service"
+                  className="w-full h-36 rounded-t-md object-cover brightness-75 contrast-125"
+                />
+                <div className="absolute bg-service-bg right-4 -bottom-6 rounded-full w-12 h-12 flex items-center justify-center shadow-md">
+                  {service.icon}
+                </div>
+              </div>
+              <p className="text-black font-medium text-sm px-4 pt-8 pb-4 whitespace-pre-line">
+                {service.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop layout - grid */}
+        <div className="mt-4 hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-md relative border border-gray-200/60 shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
               <img
                 src={service.image}
                 alt="service"
                 className="w-full h-32 rounded-t-md object-cover brightness-75 contrast-150 opacity-100"
-              />{" "}
-              <div className="absolute bg-service-bg right-6 bottom-16 rounded-full w-16 h-16 flex items-center justify-center">
+              />
+              <div className="absolute bg-service-bg right-6 bottom-16 rounded-full w-16 h-16 flex items-center justify-center shadow-md">
                 {service.icon}
               </div>
               <p className="text-black font-medium line-height-1 px-6 py-6 whitespace-pre-line">
