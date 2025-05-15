@@ -7,10 +7,23 @@ import { MdMessage } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
+import { AiOutlineHome } from "react-icons/ai";
+import { BsGrid } from "react-icons/bs";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { TfiPackage } from "react-icons/tfi";
+import { RiGlobalLine } from "react-icons/ri";
+import { BiSupport } from "react-icons/bi";
+import { IoInformationCircleOutline } from "react-icons/io5";
+import { BsFileText } from "react-icons/bs";
+import { SlOrganization } from "react-icons/sl";
+import { MdOutlineSecurity } from "react-icons/md";
 // Images
 import logo from "/logo-colored.svg";
 import MobileBottomNav from "./MobileBottomNav";
 const Header = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   const icons = [
     {
       icon: <MdMessage size={28} />,
@@ -74,7 +87,12 @@ const Header = () => {
       <div className="w-full px-4 py-2 flex flex-col md:hidden">
         <div className="flex justify-between items-center">
           <div className="left flex items-center gap-4">
-            <RxHamburgerMenu size={24} className="text-gray-700" />
+            <button onClick={() => setShowSidebar(true)}>
+              <RxHamburgerMenu
+                size={24}
+                className="text-gray-700 cursor-pointer"
+              />
+            </button>
             <img src={logo} alt="Logo" className="h-10" />
           </div>
           <div className="right flex items-center gap-5">
@@ -90,6 +108,120 @@ const Header = () => {
             placeholder="Search"
           />
         </div>
+
+        {/* Mobile Sidebar Navigation */}
+        <div
+          className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+            showSidebar ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          {/* Sidebar Header */}
+          <div className="flex items-center justify-between p-4 border-b">
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600">
+                User
+              </div>
+              <div className="ml-3">
+                <div className="text-sm font-medium">Sign in | Register</div>
+              </div>
+            </div>
+            <button onClick={() => setShowSidebar(false)}>
+              <IoMdClose size={24} className="text-gray-700" />
+            </button>
+          </div>
+
+          {/* Sidebar Links */}
+          <div className="py-2">
+            <a
+              href="#"
+              className="flex items-center px-4 py-3 hover:bg-gray-100"
+            >
+              <AiOutlineHome size={20} className="text-gray-600" />
+              <span className="ml-3 text-gray-700">Home</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center px-4 py-3 hover:bg-gray-100"
+            >
+              <BsGrid size={20} className="text-gray-600" />
+              <span className="ml-3 text-gray-700">Categories</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center px-4 py-3 hover:bg-gray-100"
+            >
+              <MdOutlineFavoriteBorder size={20} className="text-gray-600" />
+              <span className="ml-3 text-gray-700">Favorites</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center px-4 py-3 hover:bg-gray-100"
+            >
+              <TfiPackage size={20} className="text-gray-600" />
+              <span className="ml-3 text-gray-700">My orders</span>
+            </a>
+
+            <div className="border-t border-b py-2">
+              <a
+                href="#"
+                className="flex items-center px-4 py-3 hover:bg-gray-100"
+              >
+                <RiGlobalLine size={20} className="text-gray-600" />
+                <span className="ml-3 text-gray-700">English | USD</span>
+              </a>
+              <a
+                href="#"
+                className="flex items-center px-4 py-3 hover:bg-gray-100 relative"
+              >
+                <BiSupport size={20} className="text-gray-600" />
+                <span className="ml-3 text-gray-700">Contact us</span>
+                <div className="absolute right-4 w-2 h-2 bg-pink-500 rounded-full"></div>
+              </a>
+              <a
+                href="#"
+                className="flex items-center px-4 py-3 hover:bg-gray-100"
+              >
+                <IoInformationCircleOutline
+                  size={20}
+                  className="text-gray-600"
+                />
+                <span className="ml-3 text-gray-700">About</span>
+              </a>
+            </div>
+
+            <div className="py-2">
+              <a
+                href="#"
+                className="flex items-center px-4 py-3 hover:bg-gray-100"
+              >
+                <BsFileText size={20} className="text-gray-600" />
+                <span className="ml-3 text-gray-700">User agreement</span>
+              </a>
+              <a
+                href="#"
+                className="flex items-center px-4 py-3 hover:bg-gray-100"
+              >
+                <SlOrganization size={20} className="text-gray-600" />
+                <span className="ml-3 text-gray-700">Partnership</span>
+              </a>
+              <a
+                href="#"
+                className="flex items-center px-4 py-3 hover:bg-gray-100"
+              >
+                <MdOutlineSecurity size={20} className="text-gray-600" />
+                <span className="ml-3 text-gray-700">Privacy policy</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Overlay when sidebar is open */}
+        {showSidebar && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={() => setShowSidebar(false)}
+          ></div>
+        )}
       </div>
       <MobileBottomNav />
     </div>
