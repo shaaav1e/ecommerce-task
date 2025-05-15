@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+
+/* Custom scrollbar for horizontal scrolling */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-thin {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: thin;     /* Firefox */
+}

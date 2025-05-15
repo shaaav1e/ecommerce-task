@@ -24,54 +24,96 @@ const Outdoor = () => {
   return (
     <div className="mt-4">
       <div className="bg-white container rounded-md border border-gray-200">
-        {/* Changed grid-cols-5 to custom grid with fr units */}
-        <div className="grid grid-cols-[350px_1fr]">
-          {/* Left Column: Home and Outdoor - now with fixed width */}
-          <div className="relative h-full bg-box-1">
+        {/* Mobile Layout */}
+        <div className="lg:hidden">
+          <div className="relative bg-box-1 h-48">
             <img
               src={plant}
               alt="Plant"
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-6 left-6 z-10">
+            <div className="absolute top-4 left-4 z-10">
               <h2 className="text-black text-xl font-semibold">
                 Home and <br /> outdoor
               </h2>
-              <button className="bg-white mt-4 px-4 py-2 rounded-md">
+              <button className="bg-white mt-3 px-4 py-1 rounded-md text-sm">
                 Source now
               </button>
             </div>
           </div>
 
-          {/* Right Columns: Product Grid */}
-          <div className="grid grid-cols-4">
-            {items.map((item, index) => {
-              // Calculate row and column position
-              const row = Math.floor(index / 4);
-              const col = index % 4;
-
-              return (
-                <div
-                  key={index}
-                  className={`h-full flex flex-col justify-between px-4 py-4
-                    ${col > 0 ? "border-l border-gray-200" : ""}
-                    ${row > 0 ? "border-t border-gray-200" : ""}`}
-                >
-                  <div>
-                    <p className="font-medium text-base">{item.name}</p>
-                    <p className="text-sm text-icons">{item.text}</p>
-                  </div>
-
-                  <div className="flex justify-end mt-2">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-20 h-20 object-contain"
-                    />
-                  </div>
+          <div className="flex overflow-x-auto pb-4 scrollbar-thin">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 border-r border-gray-200 last:border-r-0 w-[160px] flex flex-col justify-between p-4"
+              >
+                <div>
+                  <p className="font-medium text-base">{item.name}</p>
+                  <p className="text-sm text-icons">{item.text}</p>
                 </div>
-              );
-            })}
+                <div className="flex justify-end mt-3">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-20 h-20 object-contain"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:block">
+          <div className="grid grid-cols-[350px_1fr]">
+            {/* Left Column: Home and Outdoor - now with fixed width */}
+            <div className="relative h-full bg-box-1">
+              <img
+                src={plant}
+                alt="Plant"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-6 left-6 z-10">
+                <h2 className="text-black text-xl font-semibold">
+                  Home and <br /> outdoor
+                </h2>
+                <button className="bg-white mt-4 px-4 py-2 rounded-md">
+                  Source now
+                </button>
+              </div>
+            </div>
+
+            {/* Right Columns: Product Grid */}
+            <div className="grid grid-cols-4">
+              {items.map((item, index) => {
+                // Calculate row and column position
+                const row = Math.floor(index / 4);
+                const col = index % 4;
+
+                return (
+                  <div
+                    key={index}
+                    className={`h-full flex flex-col justify-between px-4 py-4
+                      ${col > 0 ? "border-l border-gray-200" : ""}
+                      ${row > 0 ? "border-t border-gray-200" : ""}`}
+                  >
+                    <div>
+                      <p className="font-medium text-base">{item.name}</p>
+                      <p className="text-sm text-icons">{item.text}</p>
+                    </div>
+
+                    <div className="flex justify-end mt-2">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-20 h-20 object-contain"
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

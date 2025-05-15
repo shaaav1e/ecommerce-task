@@ -35,10 +35,10 @@ const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="mt-2">
-      <div className="container bg-white rounded-md border-1 border-border px-6 py-4 ">
-        <div className="grid grid-cols-5 grid-rows-1 gap-4 min-h-[450px] ">
+      <div className="md:container md:bg-white md:rounded-md md:border-1 md:border-border md:px-6 md:py-4 ">
+        <div className="grid grid-cols-5 grid-rows-1 gap-4 md:min-h-[450px] ">
           {/* Left Side - Col 1 */}
-          <div className="flex flex-col gap-1.5">
+          <div className="hidden md:flex md:flex-col md:gap-1.5">
             {categories.map((category, i) => (
               <div
                 key={i}
@@ -55,27 +55,27 @@ const Hero = () => {
             ))}
           </div>
           {/* Mid Side - Col 2-4 */}
-          <div className="col-span-3 relative flex items-center justify-center">
+          <div className="col-span-5 md:col-span-3 relative md:flex md:items-center md:justify-center">
             {/* Text overlay */}
-            <div className="absolute top-15 left-28 z-10">
+            <div className="absolute top-10 left-10 md:top-15 md:left-28 z-10">
               <p className="text-2xl font-light text-black tracking-wide">
                 Latest trending
               </p>
               <h2 className="text-3xl font-bold text-black mb-4">
                 Electronic items
               </h2>
-              <button className="bg-white px-4 py-3 rounded-md text-sm">
+              <button className="bg-white px-4 py-2 md:py-3 rounded-md text-sm text-blue">
                 Learn more
               </button>
             </div>
             <img
               src="/main11.png"
               alt="Laptop and Mobile"
-              className="h-full w-full max-w-[930px] object-contain"
+              className="h-full w-full md:max-w-[930px] object-cover"
             />
           </div>
           {/* Right Side - Col 3 */}
-          <div className="flex flex-col justify-between ">
+          <div className="hidden md:flex md:flex-col md:justify-between ">
             {/* Box 1 */}
             <HeroBox1 />
             {/* Box 2 */}
