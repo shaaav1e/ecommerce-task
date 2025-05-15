@@ -35,12 +35,12 @@ const ExtraServices = () => {
   return (
     <div className="mt-6">
       <div className="w-[100%] md:container md:mx-auto ">
-        <h1 className="text-black font-semibold text-xl md:text-2xl">
+        <h1 className="text-black font-semibold text-xl md:text-2xl p-4">
           Our extra services
         </h1>
 
         {/* Mobile layout - horizontal scrolling */}
-        <div className="mt-4 flex overflow-x-auto pb-6 gap-4 md:hidden scrollbar-thin">
+        <div className="mt-4 flex overflow-x-auto pb-6 gap-4 md:hidden scrollbar-thin p-4">
           {services.map((service, index) => (
             <div
               key={index}
