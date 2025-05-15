@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <div className="mt-2">
       <div className="container bg-white rounded-md border-1 border-border px-6 py-4 ">
-        <div className="grid grid-cols-5 grid-rows-1 gap-4 h-[450px]">
+        <div className="grid grid-cols-5 grid-rows-1 gap-4 min-h-[450px] ">
           {/* Left Side - Col 1 */}
           <div className="flex flex-col gap-1.5">
             {categories.map((category, i) => (
@@ -55,7 +55,7 @@ const Hero = () => {
             ))}
           </div>
           {/* Mid Side - Col 2-4 */}
-          <div className="col-span-3 relative">
+          <div className="col-span-3 relative flex items-center justify-center">
             {/* Text overlay */}
             <div className="absolute top-15 left-28 z-10">
               <p className="text-2xl font-light text-black tracking-wide">
@@ -71,7 +71,7 @@ const Hero = () => {
             <img
               src="/main11.png"
               alt="Laptop and Mobile"
-              className="h-full w-full object-contain"
+              className="h-full w-full max-w-[930px] object-contain"
             />
           </div>
           {/* Right Side - Col 3 */}

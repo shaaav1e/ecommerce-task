@@ -12,6 +12,7 @@ import Quote from "./components/Quote";
 import Recommended from "./components/Recommended";
 import ExtraServices from "./components/ExtraServices";
 import Suppliers from "./components/Suppliers";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Recommended />
         <ExtraServices />
         <Suppliers />
+        <Newsletter />
       </main>
       <Footer />
     </>

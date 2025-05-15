@@ -25,6 +25,11 @@
     --color-desc:#8B96A5;
     /* Extra Services - bg color rounded-full */
     --color-service-bg:#D1E7FF;
+    /* NewsLetter */
+    --color-newsletter:#EFF2F4;
+    --color-newsletter-text:#606060;
+    /* Footer */
+    --color-icons-2:#BDC4CD;
 }
 .container
 {
