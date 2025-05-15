@@ -64,7 +64,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-white">
-        <div className="container py-8 md:py-10 px-4 md:px-0">
+        <div className=" w-[100%] md:container md:mx-auto  md:py-10 p-4 md:px-0">
           {/* Mobile Footer */}
           <div className="md:hidden">
             <div className="flex flex-col gap-6">
@@ -115,8 +115,8 @@ const Footer = () => {
                   {footer[5].title}
                 </p>
                 <div className="flex gap-3">
-                  <img src={apple} alt="Apple Store" className="w-32 h-32" />
-                  <img src={google} alt="Google Play" className="w-48 h-48" />
+                  <img src={apple} alt="Apple Store" className="w-32 h-12" />
+                  <img src={google} alt="Google Play" className="w-32 h-12" />
                 </div>
               </div>
             </div>

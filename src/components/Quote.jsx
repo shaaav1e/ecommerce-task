@@ -3,9 +3,9 @@ import React from "react";
 const Quote = () => {
   return (
     <div className="mt-4">
-      <div className="bg-white container md:rounded-md">
+      <div className="bg-white w-[100%] md:container md:mx-auto md:rounded-md">
         <div className="flex justify-between bg md:rounded-md overflow-hidden">
-          <div className="md:w-1/2 flex flex-col gap-3 px-8 md:px-12 py-3 md:py-10 text-white">
+          <div className="md:w-1/2 flex flex-col gap-3 md:px-4 md:py-10 text-white">
             <h1 className="font-semibold text-xl md:text-3xl tracking-wide">
               An easy way to send <br /> requests to all suppliers
             </h1>

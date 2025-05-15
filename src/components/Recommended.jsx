@@ -62,7 +62,7 @@ const Recommended = () => {
 
   return (
     <div className="mt-6">
-      <div className="container  md:px-0 md:py-0">
+      <div className="w-[100%] p-4 md:container md:mx-auto md:px-0 md:py-0">
         <h1 className="text-black font-semibold text-2xl">Recommended items</h1>
         <div className="mt-4 grid grid-cols-2 md:grid-cols-5 gap-4">
           {clothItems.map((item, index) => (

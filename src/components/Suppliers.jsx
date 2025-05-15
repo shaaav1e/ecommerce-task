@@ -66,45 +66,14 @@ const Suppliers = () => {
   ];
   return (
     <div className="mt-6">
-      <div className="container px-4 md:px-0">
-        <h1 className="text-black font-semibold text-xl md:text-2xl">
+      <div className="w-[100%] p-4 md:container md:mx-auto md:px-0">
+        <h1 className="text-black font-semibold text-2xl">
           Suppliers by region
         </h1>
-
-        {/* Mobile view - horizontal scrollable list */}
-        <div className="md:hidden mt-4">
-          <div className="overflow-x-auto pb-4 scrollbar-thin">
-            <div className="flex gap-4 py-2">
-              {flags.map((flag, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 bg-white rounded-md p-3 border border-gray-200/60 shadow-sm"
-                >
-                  <div className="flex items-center gap-3 w-48">
-                    <img
-                      src={flag.image}
-                      alt={flag.name}
-                      className="w-10 h-10 object-contain"
-                    />
-                    <div className="flex flex-col">
-                      <p className="font-medium text-sm">{flag.name}</p>
-                      <p className="text-xs text-desc">{flag.text}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop view - grid */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-4 mt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-6">
           {flags.map((flag, index) => (
-            <div
-              key={index}
-              className="text-black hover:bg-gray-50 p-2 rounded-md transition-colors duration-200"
-            >
-              <div className="flex items-center gap-3">
+            <div key={index} className="text-black">
+              <div className="flex items-center gap-2">
                 <img
                   src={flag.image}
                   alt={flag.name}

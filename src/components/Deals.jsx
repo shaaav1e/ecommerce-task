@@ -23,9 +23,10 @@ const Deals = () => {
 
   return (
     <div className="mt-8">
-      <div className="bg-white px-6 py-4 container md:rounded-md md:border md:border-gray-200 md:px-6 md:py-4">
+      <div className="bg-white p-4 w-[100%] md:container md:mx-auto md:rounded-md md:border md:border-gray-200 md:px-6 md:py-4">
         {/* Mobile Layout */}
         <div className="lg:hidden">
+          {" "}
           <div className="flex justify-between items-center">
             <div className="flex flex-col mb-4">
               <h2 className="text-black text-lg font-semibold">
@@ -37,15 +38,18 @@ const Deals = () => {
             </div>
 
             <div className="flex items-center gap-2 mb-4">
-              {deals.map((deal) => (
-                <div
-                  key={deal.id}
-                  className="flex flex-col items-center bg-newsletter px-3 py-1"
-                >
-                  <p className="font-bold text-desc">{deal.number}</p>
-                  <p className="text-xs text-desc">{deal.text}</p>
-                </div>
-              ))}
+              {deals.map(
+                (deal, index) =>
+                  index !== 0 && (
+                    <div
+                      key={deal.id}
+                      className="flex flex-col items-center bg-newsletter px-3 py-1"
+                    >
+                      <p className="font-bold text-desc">{deal.number}</p>
+                      <p className="text-xs text-desc">{deal.text}</p>
+                    </div>
+                  )
+              )}
             </div>
           </div>
           <div className="flex overflow-x-auto pb-4 gap-4 scrollbar-thin">

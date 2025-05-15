@@ -25,11 +25,11 @@ const Outdoor = () => {
 
   return (
     <div className="mt-4">
-      <div className="bg-white container md:rounded-md md:border md:border-gray-200">
+      <div className="bg-white w-[100%] md:container md:mx-auto md:rounded-md md:border md:border-gray-200">
         {/* Mobile Layout */}
         <div className="lg:hidden">
           {" "}
-          <h2 className="text-black text-lg font-semibold px-6 py-4 border-b border-gray-200/60">
+          <h2 className="text-black text-lg font-semibold p-4 border-b border-gray-200/60">
             Home and outdoor
           </h2>{" "}
           <div className="flex overflow-x-auto pb-4 scrollbar-thin">

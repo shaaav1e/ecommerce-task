@@ -32,12 +32,19 @@
     --color-icons-2:#BDC4CD;
     /* Mobile */
     --color-equipment:#505050;
+    /* Placeholder-mob */
+    --color-placeholder-mob:#F7FAFC;
 }
 .container
 {
-    width:80%;
-    margin:0 auto;
+   @apply w-[90%] md:w-[80%] mx-auto;
+    
 }
+/* @media screen and (min-width: 768px) {
+    .container {
+        width: 80%; 
+    } 
+}*/
 
 .inter {
     font-family: 'Inter', sans-serif;

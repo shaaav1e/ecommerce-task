@@ -27,7 +27,7 @@ const Consumer = () => {
 
   return (
     <div className="mt-4">
-      <div className="bg-white container md:rounded-md md:border md:border-gray-200">
+      <div className="bg-white w-[100%] md:container md:mx-auto md:rounded-md md:border md:border-gray-200">
         {/* Mobile Layout */}
         <div className="lg:hidden">
           <h2 className="text-black text-xl font-semibold p-4 border-b border-gray-200/60">

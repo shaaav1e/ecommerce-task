@@ -34,7 +34,7 @@ const ExtraServices = () => {
   ];
   return (
     <div className="mt-6">
-      <div className="container ">
+      <div className="w-[100%] md:container md:mx-auto ">
         <h1 className="text-black font-semibold text-xl md:text-2xl">
           Our extra services
         </h1>
