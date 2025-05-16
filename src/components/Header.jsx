@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
@@ -58,9 +59,12 @@ const Header = () => {
     <div className="bg-white py-4">
       {/* Desktop/Tablet Layout */}
       <div className="hidden w-[100%] md:container md:mx-auto px-4 md:px-0 md:flex md:justify-between md:items-center">
+        {" "}
         {/* Logo - Left Section */}
         <div className="logo flex items-center flex-shrink-0 md:mr-4">
-          <img src={logo} alt="Logo" className="h-10 md:h-12" />
+          <Link to="/">
+            <img src={logo} alt="Logo" className="h-10 md:h-12" />
+          </Link>
         </div>
         {/* Input - Mid Section */}
         <div className="Search flex-shrink flex-grow flex items-stretch border-2 border-blue rounded-md mx-4 min-w-0 max-w-3xl">
@@ -106,7 +110,9 @@ const Header = () => {
                 className="text-gray-700 cursor-pointer"
               />
             </button>
-            <img src={logo} alt="Logo" className="h-10" />
+            <Link to="/">
+              <img src={logo} alt="Logo" className="h-10" />
+            </Link>
           </div>
           <div className="right flex items-center gap-5">
             <IoCartOutline size={24} className="text-gray-700" />
@@ -143,89 +149,96 @@ const Header = () => {
             >
               <IoMdClose size={24} className="text-gray-700" />
             </button>
-          </div>
-
+          </div>{" "}
           {/* Sidebar Links */}
           <div className="py-2">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="flex items-center px-4 py-3 hover:bg-gray-100"
+              onClick={() => setShowSidebar(false)}
             >
               <AiOutlineHome size={20} className="text-gray-600" />
               <span className="ml-3 text-gray-700">Home</span>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/products"
               className="flex items-center px-4 py-3 hover:bg-gray-100"
+              onClick={() => setShowSidebar(false)}
             >
               <BsGrid size={20} className="text-gray-600" />
-              <span className="ml-3 text-gray-700">Categories</span>
-            </a>
-            <a
-              href="#"
+              <span className="ml-3 text-gray-700">Products</span>
+            </Link>
+            <Link
+              to="/"
               className="flex items-center px-4 py-3 hover:bg-gray-100"
+              onClick={() => setShowSidebar(false)}
             >
               <MdOutlineFavoriteBorder size={20} className="text-gray-600" />
               <span className="ml-3 text-gray-700">Favorites</span>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/"
               className="flex items-center px-4 py-3 hover:bg-gray-100"
+              onClick={() => setShowSidebar(false)}
             >
               <TfiPackage size={20} className="text-gray-600" />
               <span className="ml-3 text-gray-700">My orders</span>
-            </a>
-
+            </Link>{" "}
             <div className="border-t border-b py-2">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="flex items-center px-4 py-3 hover:bg-gray-100"
+                onClick={() => setShowSidebar(false)}
               >
                 <RiGlobalLine size={20} className="text-gray-600" />
                 <span className="ml-3 text-gray-700">English | USD</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/"
                 className="flex items-center px-4 py-3 hover:bg-gray-100 relative"
+                onClick={() => setShowSidebar(false)}
               >
                 <BiSupport size={20} className="text-gray-600" />
                 <span className="ml-3 text-gray-700">Contact us</span>
                 <div className="absolute right-4 w-2 h-2 bg-pink-500 rounded-full"></div>
-              </a>
-              <a
-                href="#"
+              </Link>{" "}
+              <Link
+                to="/"
                 className="flex items-center px-4 py-3 hover:bg-gray-100"
+                onClick={() => setShowSidebar(false)}
               >
                 <IoInformationCircleOutline
                   size={20}
                   className="text-gray-600"
                 />
                 <span className="ml-3 text-gray-700">About</span>
-              </a>
+              </Link>
             </div>
-
             <div className="py-2">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="flex items-center px-4 py-3 hover:bg-gray-100"
+                onClick={() => setShowSidebar(false)}
               >
                 <BsFileText size={20} className="text-gray-600" />
                 <span className="ml-3 text-gray-700">User agreement</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/"
                 className="flex items-center px-4 py-3 hover:bg-gray-100"
+                onClick={() => setShowSidebar(false)}
               >
                 <SlOrganization size={20} className="text-gray-600" />
                 <span className="ml-3 text-gray-700">Partnership</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/"
                 className="flex items-center px-4 py-3 hover:bg-gray-100"
+                onClick={() => setShowSidebar(false)}
               >
                 <MdOutlineSecurity size={20} className="text-gray-600" />
                 <span className="ml-3 text-gray-700">Privacy policy</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>{" "}

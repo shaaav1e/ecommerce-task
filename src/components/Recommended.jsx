@@ -18,7 +18,7 @@ const Recommended = () => {
       id: 2,
       image: image2,
       price: "$12.50",
-      text: "Jeans shorts for men blue color",
+      text: "T-shirt for men in blue color",
     },
     {
       id: 3,
@@ -32,12 +32,17 @@ const Recommended = () => {
       price: "$8.30",
       text: "Brown winter coat medium size",
     },
-    { id: 5, image: image5, price: "$22.10", text: "Leather wallet for men" },
+    {
+      id: 5,
+      image: image5,
+      price: "$22.10",
+      text: "Backpack for everyday use",
+    },
     {
       id: 6,
       image: image6,
       price: "$18.75",
-      text: "Canon camera black, 100x zoom",
+      text: "Leather Wallet in blue color",
     },
     {
       id: 7,

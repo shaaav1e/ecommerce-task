@@ -1,38 +1,31 @@
-import { useState } from "react";
-
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import BottomNavbar from "./components/BottomNavbar";
-import Hero from "./components/Hero";
-import Deals from "./components/Deals";
-import Footer from "./components/Footer";
-import Outdoor from "./components/Outdoor";
-import Consumer from "./components/Consumer";
-import Quote from "./components/Quote";
-import Recommended from "./components/Recommended";
-import ExtraServices from "./components/ExtraServices";
-import Suppliers from "./components/Suppliers";
-import Newsletter from "./components/Newsletter";
+
+// Components
+import Layout from "./components/Layout";
+import HomePage from "./components/HomePage";
+import ProductsPage from "./components/Subpages/ProductsPage";
 
 function App() {
   return (
-    <>
-      <Header />
-      <BottomNavbar />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* Home page route */}
+          <Route index element={<HomePage />} />
 
-      <main>
-        <Hero />
-        <Deals />
-        <Outdoor />
-        <Consumer />
-        <Quote />
-        <Recommended />
-        <ExtraServices />
-        <Suppliers />
-        <Newsletter />
-      </main>
-      <Footer />
-    </>
+          {/* Products page route */}
+          <Route path="products" element={<ProductsPage />} />
+
+          {/* Add more routes here as needed */}
+          {/* <Route path="about" element={<AboutPage />} /> */}
+          {/* <Route path="contact" element={<ContactPage />} /> */}
+
+          {/* 404 route - redirect to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

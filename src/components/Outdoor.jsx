@@ -3,11 +3,11 @@ import React from "react";
 import plant from "/image92.png";
 import softchair from "/interior/1.jpg";
 import lamp from "/interior/6.jpg";
-import mattress from "/interior/5.jpg";
+import mattress from "/interior/5.png";
 import wood from "/interior/3.jpg";
 import mixer from "/interior/9.jpg";
 import blender from "/interior/8.jpg";
-import appliance from "/interior/7.jpg";
+import appliance from "/interior/7.png";
 import decoration from "/interior/4.jpg";
 // Icons
 import { GoArrowRight } from "react-icons/go";

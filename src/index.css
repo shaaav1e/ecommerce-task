@@ -25,3 +25,49 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: thin;     /* Firefox */
 }
+
+/* Hide scrollbar completely for mobile horizontal scrollable elements */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Blue color class for consistent styling */
+.bg-blue {
+  background-color: #0D6EFD;
+}
+
+.text-blue {
+  color: #0D6EFD;
+}
+
+.border-blue {
+  border-color: #0D6EFD;
+}
+
+/* Modal transition classes */
+.modal-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 300ms, transform 300ms;
+}

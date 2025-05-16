@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaHome } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -6,22 +7,28 @@ const BottomNavbar = () => {
   const menu_names = [
     {
       name: "All category",
+      path: "/",
     },
     {
       name: "Hot offers",
+      path: "/",
     },
     {
       name: "Gift boxes",
+      path: "/",
     },
     {
-      name: "Projects",
+      name: "Products",
+      path: "/products",
     },
     {
       name: "Menu item",
+      path: "/",
     },
     {
       name: "Help",
       hasDropdown: true,
+      path: "/",
     },
   ];
   return (
@@ -31,17 +38,23 @@ const BottomNavbar = () => {
           {" "}
           {/* Left side with flex-1 - taking more space */}
           <div className="flex flex-1 items-center md:gap-3 lg:gap-6 xl:gap-8">
-            <GiHamburgerMenu className="flex-shrink-0" />
+            <GiHamburgerMenu className="flex-shrink-0" />{" "}
             {menu_names.map((menu, i) => (
-              <div key={i} className="flex items-center whitespace-nowrap">
-                <p className="text-black text-sm md:text-base">{menu.name}</p>
+              <Link
+                to={menu.path}
+                key={i}
+                className="flex items-center whitespace-nowrap hover:text-blue transition-colors"
+              >
+                <p className="text-black text-sm md:text-base hover:text-blue">
+                  {menu.name}
+                </p>
                 {menu.hasDropdown && (
                   <RiArrowDropDownLine
                     size={24}
                     className="text-icons flex-shrink-0"
                   />
                 )}
-              </div>
+              </Link>
             ))}
           </div>{" "}
           {/* 1st right side - taking less space */}
