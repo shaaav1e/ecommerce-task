@@ -22,8 +22,8 @@ const BottomNavbar = () => {
       path: "/products",
     },
     {
-      name: "Menu item",
-      path: "/",
+      name: "Description",
+      path: "/description",
     },
     {
       name: "Help",

@@ -5,6 +5,7 @@ import "./App.css";
 import Layout from "./components/Layout";
 import HomePage from "./components/HomePage";
 import ProductsPage from "./components/Subpages/ProductsPage";
+import ProductDescription from "./components/Subpages/ProductDescription";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="products" element={<ProductsPage />} />
 
           {/* Add more routes here as needed */}
-          {/* <Route path="about" element={<AboutPage />} /> */}
+          <Route path="description" element={<ProductDescription />} />
           {/* <Route path="contact" element={<ContactPage />} /> */}
 
           {/* 404 route - redirect to home */}

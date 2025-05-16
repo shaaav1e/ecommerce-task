@@ -286,23 +286,18 @@ const ProductsPage = () => {
                       {" "}
                       {(item.name === "Brands" || item.name === "Features") && (
                         <div
-                          className={`h-4 w-4 p-2 rounded-sm ${
+                          className={`h-5 w-5 rounded-sm ${
                             activeFilters[item.type]?.includes(subcat)
                               ? "bg-blue"
                               : "bg-gray-100 border border-gray-300"
-                          } flex items-center justify-center cursor-pointer mr-2`}
+                          } flex items-center justify-center cursor-pointer mr-2 relative`}
                           onClick={() => toggleFilter(item.type, subcat)}
                         >
                           {activeFilters[item.type]?.includes(subcat) && (
-                            <span
-                              className="text-white text-xs leading-none font-bold"
-                              style={{ marginTop: "-1px" }}
-                            >
-                              <IoIosCheckmark
-                                size={24}
-                                className="text-white"
-                              />
-                            </span>
+                            <IoIosCheckmark
+                              size={18}
+                              className="text-white absolute"
+                            />
                           )}
                         </div>
                       )}{" "}
@@ -677,18 +672,19 @@ const ProductsPage = () => {
                       <div className="space-y-2">
                         {item.subcategories.map((subcat, idx) => (
                           <div key={idx} className="flex items-center">
+                            {" "}
                             <div
-                              className={`h-4 w-4 p-2 rounded-sm ${
+                              className={`h-5 w-5 rounded-sm ${
                                 activeFilters[item.type]?.includes(subcat)
                                   ? "bg-blue"
                                   : "bg-gray-100 border border-gray-300"
-                              } flex items-center justify-center cursor-pointer mr-2`}
+                              } flex items-center justify-center cursor-pointer mr-2 relative`}
                               onClick={() => toggleFilter(item.type, subcat)}
                             >
                               {activeFilters[item.type]?.includes(subcat) && (
                                 <IoIosCheckmark
-                                  size={24}
-                                  className="text-white"
+                                  size={18}
+                                  className="text-white absolute"
                                 />
                               )}
                             </div>
