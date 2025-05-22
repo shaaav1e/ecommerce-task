@@ -1,11 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header";
 import BottomNavbar from "./BottomNavbar";
 import Newsletter from "./Newsletter";
 import Footer from "./Footer";
 
 const Layout = () => {
+  const location = useLocation();
+  const isProductDescription = location.pathname === "/description";
+
   return (
     <>
       <header>
@@ -17,9 +20,11 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      <section aria-label="Newsletter">
-        <Newsletter />
-      </section>
+      {!isProductDescription && (
+        <section aria-label="Newsletter">
+          <Newsletter />
+        </section>
+      )}
 
       <footer>
         <Footer />

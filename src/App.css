@@ -34,6 +34,12 @@
     --color-equipment:#505050;
     /* Placeholder-mob */
     --color-placeholder-mob:#F7FAFC;
+    --color-rating:#FF9017;
+    --color-dot:#DBDBDB;
+    --color-reviews:#787A80;
+    --color-box:#FFF0DF;
+    --color-border-desc:#BDC1C8;
+    --color-pcs:#606060;
 }
 .container
 {
