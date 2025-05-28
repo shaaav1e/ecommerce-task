@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import HomePage from "./components/HomePage";
 import ProductsPage from "./components/Subpages/ProductsPage";
 import ProductDescription from "./components/Subpages/ProductDescription";
+import Checkout from "./components/Subpages/Checkout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
           {/* Add more routes here as needed */}
           <Route path="description" element={<ProductDescription />} />
+          <Route path="checkout" element={<Checkout />} />
           {/* <Route path="contact" element={<ContactPage />} /> */}
 
           {/* 404 route - redirect to home */}

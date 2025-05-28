@@ -14,8 +14,8 @@ const BottomNavbar = () => {
       path: "/",
     },
     {
-      name: "Gift boxes",
-      path: "/",
+      name: "Checkout",
+      path: "/checkout",
     },
     {
       name: "Products",

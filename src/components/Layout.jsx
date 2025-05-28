@@ -8,6 +8,7 @@ import Footer from "./Footer";
 const Layout = () => {
   const location = useLocation();
   const isProductDescription = location.pathname === "/description";
+  const isCheckout = location.pathname === "/checkout";
 
   return (
     <>
@@ -20,7 +21,7 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      {!isProductDescription && (
+      {!isProductDescription && !isCheckout && (
         <section aria-label="Newsletter">
           <Newsletter />
         </section>
