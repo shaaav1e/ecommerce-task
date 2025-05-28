@@ -12,13 +12,14 @@ const MobileBottomNav = () => {
       path: "/products",
     },
     {
-      name: "Clothes",
-      path: "/",
+      name: "Description",
+      path: "/description",
     },
     {
-      name: "Accessories",
-      path: "/",
+      name: "Checkout",
+      path: "/checkout",
     },
+
     {
       name: "Help",
       path: "/",
